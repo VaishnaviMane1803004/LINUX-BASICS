@@ -1,0 +1,34 @@
+4.SELinux  Security
+
+-SELinux is the abbrivation of Security Enhanced Linux.
+-SELinux is a part of the Linux security kernel that acts as a protective agent on servers.
+-Allows administrator to control access.
+
+*Modes of SELinux -
+There are three modes of SELinux: Enforcing, Permissive and Disabled.
+1.Enforcing : Default mode at installation of SELinux. It will enforce the policies on the system, deny access and log actions.
+2.Permissive : Most commonly used mode for troubleshooting SELinux. In this mode, SELinux enables but does not enforce security policies.
+3.Disabled :  SELinux is turned off and the security policies do not protect the server.
+
+*Commands- 
+- getinforce - to enforce the privacy policy
+- sestatus - to get information about the current status of SELinux 
+
+* ENABLE/DISABLE SELinux :
+
+1.Enabling SELinux-
+-Open the file /etc/selinux/config.
+-Change option SELINUX from disabled to enforcing.
+-Restart the machine
+
+2.Disable SELinux-
+-Log in to server.
+-Check current status of SELinux  run: sestatus.
+-To disable SELinux ,run: sudo setenforce 0.
+-Edit the /etc/selinux/config file & set  SELINUX as disabled.
+-Reboot the Linux server.
+
+
+
+
+
