@@ -13,6 +13,12 @@ There are three modes of SELinux: Enforcing, Permissive and Disabled.
 *Commands- 
 - getinforce - to enforce the privacy policy
 - sestatus - to get information about the current status of SELinux 
+-setenforce-You can modify the mode SELinux is running in ,using the setenforce command.
+-Ex.: sudo setenforce Enforcing
+       sestatus
+-Ex.:sudo setenforce Permissive
+      sestatus
+      getenforce
 
 * ENABLE/DISABLE SELinux :
 
@@ -27,8 +33,3 @@ There are three modes of SELinux: Enforcing, Permissive and Disabled.
 -To disable SELinux ,run: sudo setenforce 0.
 -Edit the /etc/selinux/config file & set  SELINUX as disabled.
 -Reboot the Linux server.
-
-
-
-
-
