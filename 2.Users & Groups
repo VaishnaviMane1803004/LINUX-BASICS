@@ -33,6 +33,16 @@ These operations are performed using the following commands:
 •	usermod -aG admin : To append user to the secondary group.
 •	cat /etc/passwd : To check addition of the user 
 •    	passwd  : To assign the password to user  
+
+*The /etc/passwd file contains:
+-User name
+-Encrypted password
+-User ID number (UID)
+-User's group ID number (GID)
+-Full name of the user (GECOS)
+-User home directory
+-Login shell
+
 •	id : To get data about user and its group 
 •	chage : change user password expiry information.
 •	sudo: run one or more commands as another user typically with superuser permissions.
