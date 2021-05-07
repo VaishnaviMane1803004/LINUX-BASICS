@@ -33,6 +33,9 @@ These operations are performed using the following commands:
 •	usermod -aG admin : To append user to the secondary group.
 •	cat /etc/passwd : To check addition of the user 
 •    	passwd  : To assign the password to user  
+•	id : To get data about user and its group 
+•	chage : change user password expiry information.
+•	sudo: run one or more commands as another user typically with superuser permissions.
 
 *The /etc/passwd file contains different entries:
 -User name: It is used when user logs in.
@@ -41,7 +44,3 @@ These operations are performed using the following commands:
 -User's group ID number (GID):The primary group ID (stored in /etc/group file)
 -User home directory:The absolute path to the directory the user will be in when they log in.
 -Login shell:The absolute path of a command or shell (/bin/bash).
-
-•	id : To get data about user and its group 
-•	chage : change user password expiry information.
-•	sudo: run one or more commands as another user typically with superuser permissions.
