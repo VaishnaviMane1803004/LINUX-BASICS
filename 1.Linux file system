@@ -59,7 +59,7 @@ vi    :Text editor ,press i to insert then press ESC to return & wq to save and 
 1. Hard Links 
 
 -Command to create a hardlink
-                    $ ln -s file.txt hardlink.txt
+                    $ ln  file.txt hardlink.txt
 -	ls -l command is to show all the links with the link column shows number of links.
 -	Each hard linked file is assigned the same Inode value as the original, therefore they reference the same physical file location. 
 -	We cannot create a hard link for a directory to avoid recursive loops.
