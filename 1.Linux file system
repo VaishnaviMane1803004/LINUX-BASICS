@@ -30,7 +30,7 @@ pwd   :	Print your working directory
 ls    :	List the contents of a particular path
 cd    :	 Move to a particular path or change directory
 cd ~  :  Return to home directory.
-cd / :to shift to root user 
+cd / :To shift to root user 
 ls -l :  shows all the links with the link column shows number of links.
 cat   : To display content of the given file
 cp -r : To copy all files recursively.
