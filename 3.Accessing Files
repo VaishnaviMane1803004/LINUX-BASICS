@@ -1,4 +1,3 @@
-
 3.Accessing Files
 
 Attributes −
@@ -26,8 +25,3 @@ Two commands are available to change the owner and the group of files −
 -	chown :The chown command stands for "change owner" and is used to change the owner of a file.
 -	chgrp : The chgrp command stands for "change group" and is used to change the group of a file.
 -	chmod :To change the file or the directory permissions, you use the change mode command. 
-
-
-
-
-
