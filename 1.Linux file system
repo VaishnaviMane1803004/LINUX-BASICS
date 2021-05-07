@@ -52,11 +52,14 @@ vi    :Text editor ,press i to insert then press ESC to return & wq to save and 
 -If we create a hard link to the file and then delete the file, we can still access the file using hard link. 
 -But if we create a soft link of the file and then delete the file, we can’t access the file.
 -Simply soft links work as a shortcut while hard link increases reference count of a location .
-1. Hard Links 
 -	Command to create a hard link is: 
  
 	$ ln  [original filename] [link name] 
+	
+1. Hard Links 
 
+-Command to create a hardlink
+                    $ ln -s file.txt hardlink.txt
 -	ls -l command is to show all the links with the link column shows number of links.
 -	Each hard linked file is assigned the same Inode value as the original, therefore they reference the same physical file location. 
 -	We cannot create a hard link for a directory to avoid recursive loops.
@@ -67,7 +70,8 @@ vi    :Text editor ,press i to insert then press ESC to return & wq to save and 
 
 	 
 2. Soft Links 
- 
+ - Command to create a soft link:
+                    $ ln -s file.txt softlink.txt
 -	A soft link is similar to the file shortcut feature which is used in Windows Operating systems. 
 -	Each soft linked file contains a separate Inode value that points to the original file. 
 -	As similar to hard links, any changes to the data in either file is reflected in the other.
