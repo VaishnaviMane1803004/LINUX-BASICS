@@ -1,4 +1,3 @@
-
 2.Users & Groups
 1.Users:
 -Users are accounts ,used to login into a system. 
@@ -22,7 +21,6 @@
      -Basically sudo user is a tool that allows users & groups to have access to commands they normally would not able to access.
      -sudo enables user to have administration privilliges without logging in directly as a root user.
 
-
 These operations are performed using the following commands:
 •	whoami : To display the username of the current use.
 •	su : to switch user
@@ -38,4 +36,3 @@ These operations are performed using the following commands:
 •	id : To get data about user and its group 
 •	chage : change user password expiry information.
 •	sudo: run one or more commands as another user typically with superuser permissions.
-
