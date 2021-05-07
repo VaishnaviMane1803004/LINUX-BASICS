@@ -52,7 +52,7 @@ vi    :Text editor ,press i to insert then press ESC to return & wq to save and 
 -If we create a hard link to the file and then delete the file, we can still access the file using hard link. 
 -But if we create a soft link of the file and then delete the file, we can’t access the file.
 -Simply soft links work as a shortcut while hard link increases reference count of a location .
--	Command to create a hard link is: 
+-	Command to create a link is: 
  
 	$ ln  [original filename] [link name] 
 	
