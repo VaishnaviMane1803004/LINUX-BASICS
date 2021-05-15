@@ -8,6 +8,7 @@
 -Master Boot Record (MBR) method is used which have MSDOS as labels for BIOS.
 -Hardisk size 2 Tb & metadata stored from start to end partition.
 -Can do only 4 primary partition for booting process files & extended can have 64 partition.
+-It has firmware support as BIOS.
 2.UFI:
 -GUID Partition Table (GPT) method is used For UFI.
 -Hardisk size 10 Tb .
@@ -15,26 +16,11 @@
 -Primary partition has booting file & extended partion has storage files for the data to store.
 -In GPT, it is possible to create primary & extended but after creating extended you can not create primary.
 -Can do 64 partition & GPT have backend
+-It has firmware support as UEFI.
 
 *Two kinds of major partitions on a Linux system:
-1.data partition: normal Linux system data, including the root partition containing all the data to start up and run the system; 
-2.swap partition: expansion of the computer's physical memory, extra memory on hard disk.
-
-* The MBR :
--The first sector is the master boot record (MBR) of the disk; this is the sector that the BIOS reads in and starts when the machine is first booted.
--The partitioning scheme is not built into the hardware, or even into the BIOS. 
--It is only a convention that many OS follow. Not all OS do follow it, but they are the exceptions. 
--Some OS support partitions, but they occupy one partition on the hard disk, and use their internal partitioning method within that partition. 
--The latter type exists peacefully with other operating systems (including Linux), and does not require any special measures, but an operating system that doesn't support partitions cannot co-exist on the same disk with any other operating system.
-
-*Extended and logical partitions : 
--The original partitioning scheme for PC hard disks allowed only four partitions. 
--This quickly turned out to be too little in real life, partly because some people want more than four operating systems,
- but primarily because sometimes it is a good idea to have several partitions for one operating system. 
-For example, swap space is usually best put in its own partition for Linux instead of in the main Linux partition for reasons of speed.
--This allows partitioning a primary partition into sub-partitions.
--The primary partition thus subdivided is the extended partition;
--The sub-partitions are logical partitions. They behave like primary partitions, but are created differently. There is no speed difference between them.
+1.data partition: Data in Linux system including the root partition containing all the data to start up and run the system; 
+2.swap partition: extra memory /expansion of the computer's physical memory, 
 
 *Steps to create a partition :
 
