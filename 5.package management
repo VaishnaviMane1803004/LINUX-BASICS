@@ -19,7 +19,9 @@ history undo:To reverse a transaction :-yum history undo INDEXNUMBER
 
 * RPM :- It is the package management system used by Linux Standard Base (LSB)-compliant distributions for low-level handling of packages. 
 Just like dpkg, it can query, install, verify, upgrade, and remove packages, and is more frequently used by Fedora-based distributions, such as RHEL and CentOS.
--RPM is a popular package management tool in Red Hat Enterprise Linux-based distros. Using RPM, you can install, uninstall, and query individual software packages. Still, it cannot manage dependency resolution like YUM. RPM does provide you useful output, including a list of required packages. An RPM package consists of an archive of files and metadata. Metadata includes helper scripts, file attributes, and information about packages.
+-RPM is a popular package management tool in Red Hat Enterprise Linux-based distros. Using RPM, you can install, uninstall, and query individual software packages. 
+Still, it cannot manage dependency resolution like YUM. RPM does provide you useful output, including a list of required packages. 
+An RPM package consists of an archive of files and metadata. Metadata includes helper scripts, file attributes, and information about packages.
 -RPM maintains a database of installed packages, which enables powerful and fast queries. 
 -The RPM database is inside /var/lib, and the file is named __db*.
 
