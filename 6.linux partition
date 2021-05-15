@@ -9,7 +9,7 @@
 -Hardisk size 2 Tb & metadata stored from start to end partition.
 -Can do only 4 primary partition for booting process files & extended can have 64 partition.
 -It has firmware support as BIOS.
-2.UFI:
+2.UEFI:
 -GUID Partition Table (GPT) method is used For UFI.
 -Hardisk size 10 Tb .
 -The storage is divided into two parts known as Primary Partition & Extended Partition.
