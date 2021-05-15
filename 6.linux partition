@@ -33,4 +33,3 @@
 7. Add entry in fstab=> cat/etc/fstab=> vi/etc/fstab=> lsblk -- fs / dev / vdb
 8. Systemctl daemon-reload=> system etl daemon -reload 
 9. Mount the partition on the directory=> mount/archieve=>  df-h
-10. Reboot
