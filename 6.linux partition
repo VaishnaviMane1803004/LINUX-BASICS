@@ -1,0 +1,50 @@
+*Introduction :
+- The process of dividing a disk into logical areas that can be worked with separately is called partitioning.
+-For easy backup procedure,for many os on a single disk,for having different partition for different file systems ,more management of disk memory ,etc.
+ for this  we use partitioning.
+
+*Types of chips for motherboard:
+1.BIOS:
+-Master Boot Record (MBR) method is used which have MSDOS as labels for BIOS.
+-Hardisk size 2 Tb & metadata stored from start to end partition.
+-Can do only 4 primary partition for booting process files & extended can have 64 partition.
+2.UFI:
+-GUID Partition Table (GPT) method is used For UFI.
+-Hardisk size 10 Tb .
+-The storage is divided into two parts known as Primary Partition & Extended Partition.
+-Primary partition has booting file & extended partion has storage files for the data to store.
+-In GPT, it is possible to create primary & extended but after creating extended you can not create primary.
+-Can do 64 partition & GPT have backend
+
+*Two kinds of major partitions on a Linux system:
+1.data partition: normal Linux system data, including the root partition containing all the data to start up and run the system; 
+2.swap partition: expansion of the computer's physical memory, extra memory on hard disk.
+
+* The MBR :
+-The first sector is the master boot record (MBR) of the disk; this is the sector that the BIOS reads in and starts when the machine is first booted.
+-The partitioning scheme is not built into the hardware, or even into the BIOS. 
+-It is only a convention that many OS follow. Not all OS do follow it, but they are the exceptions. 
+-Some OS support partitions, but they occupy one partition on the hard disk, and use their internal partitioning method within that partition. 
+-The latter type exists peacefully with other operating systems (including Linux), and does not require any special measures, but an operating system that doesn't support partitions cannot co-exist on the same disk with any other operating system.
+
+*Extended and logical partitions : 
+-The original partitioning scheme for PC hard disks allowed only four partitions. 
+-This quickly turned out to be too little in real life, partly because some people want more than four operating systems,
+ but primarily because sometimes it is a good idea to have several partitions for one operating system. 
+For example, swap space is usually best put in its own partition for Linux instead of in the main Linux partition for reasons of speed.
+-This allows partitioning a primary partition into sub-partitions.
+-The primary partition thus subdivided is the extended partition;
+-The sub-partitions are logical partitions. They behave like primary partitions, but are created differently. There is no speed difference between them.
+
+*Steps to create a partition :
+
+1. List partitions=> Parted -l
+2. Label a partition=> parted / dev /vdb mklabel msdos => parted -l 
+3. Use mkpart to make a partition=> parted /dev /vdb => mkpart=> primary=> xfs=> 2048s=> x%=> p
+4. Let the partition be created/settled=>quit first then=> Udevam settle
+5. Attach the file system to the partition=> mkfs. xFs /dev/vdbl
+6. Create a mount point directory=> df-h => mkdir / archive
+7. Add entry in fstab=> cat/etc/fstab=> vi/etc/fstab=> lsblk -- fs / dev / vdb
+8. Systemctl daemon-reload=> system etl daemon -reload 
+9. Mount the partition on the directory=> mount/archieve=>  df-h
+10. Reboot
