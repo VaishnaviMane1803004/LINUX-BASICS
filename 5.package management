@@ -1,15 +1,12 @@
 Introduction:
 -Package management is a method of installing and maintaining (which includes updating and probably removing as well) software on the system.
 * yum :- It adds the functionality of automatic updates and package management with dependency management to RPM-based systems.
--It enables: -> RPM metadata calculation for RPMs hosted in Artifactory local repositories.
-            -> Provisioning RPMs directly from Artifactory to YUM clients.
-            -> Enables high concurrency performance for the software development industry   
-            -> Detailed RPM metadata views from Artifactory's web UI.
-            -> Providing GPG signatures that can be used by the YUM client to authenticate RPM metadata.
 -The main configuration file for YUM is at /etc/yum.conf, and all the repos are at /etc/yum.repos.d & File must have an extension .repo.
-Difference between apt & yum is ubantu has .deb extension which is from different family but cendos ,fedora,dell has .rpm extension which is from same family.
+-Yum is a package manager & YUM reads the dependencies file and build instructions, downloads the dependencies, then builds the package.
 
-=>Command Purpose:
+*Difference between apt & yum is ubantu has .deb extension which is from different family but cendos ,fedora,dell has .rpm extension which is from same family.
+
+=>Commands:
 yum install:Installs the specified packages:- yum install PACKAGENAME
 remove:	Removes the specified packages: -yum remove PACKAGENAME
 info:Lists description:-yum info PACKAGENAME
@@ -17,11 +14,10 @@ update:Updates each package to the latest version:-yum update
 history	:Displays what has happened in past transactions :-yum history 
 history undo:To reverse a transaction :-yum history undo INDEXNUMBER
 
-* RPM :- It is the package management system used by Linux Standard Base (LSB)-compliant distributions for low-level handling of packages. 
-Just like dpkg, it can query, install, verify, upgrade, and remove packages, and is more frequently used by Fedora-based distributions, such as RHEL and CentOS.
--RPM is a popular package management tool in Red Hat Enterprise Linux-based distros. Using RPM, you can install, uninstall, and query individual software packages. 
-Still, it cannot manage dependency resolution like YUM. RPM does provide you useful output, including a list of required packages. 
-An RPM package consists of an archive of files and metadata. Metadata includes helper scripts, file attributes, and information about packages.
+* RPM :- It is the package management system used by Linux Standard Base (LSB) -compliant distributions for low-level handling of packages ,Just like dpkg, it can query, install, verify, upgrade, and remove packages, and is more frequently used by Fedora-based distributions, such as RHEL and CentOS.
+-This package consists of an archive of files and meta-data used to install and erase the archive files.
+-RPM is a package container that includes information on what dependencies are needed by the package and build instructions.
+-Still, it cannot manage dependency resolution like YUM. RPM does provide you useful output, including a list of required packages. 
 -RPM maintains a database of installed packages, which enables powerful and fast queries. 
 -The RPM database is inside /var/lib, and the file is named __db*.
 
