@@ -7,7 +7,7 @@
 1.BIOS:
 -Master Boot Record (MBR) method is used which have MSDOS as labels for BIOS.
 -Hardisk size 2 Tb & metadata stored from start to end partition.
--Can do only 4 primary partition for booting process files & extended can have 64 partition.
+-Can do only 4 primary partition for booting process files.
 -It has firmware support as BIOS.
 2.UEFI:
 -GUID Partition Table (GPT) method is used For UFI.
